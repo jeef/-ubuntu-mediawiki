@@ -1,11 +1,12 @@
 # -ubuntu-mediawiki
-A mediawiki container based on ubuntu:xenial
+A mediawiki container based on reference images PHP7.1-APACHE and mediawiki/mediawiki.  Please consult their pages for more detailed operation instructions until I have time to write a more flushed out description.
 
-Uses cascading builds for the time being.  
+This build includes Mediawiki (branch REL1.29) Node (v6) and Parsoid (developer installation) as well as VisualEditor.  
 
-Build  /apache/Dockerfile  first and use the image from that to build  /mediawiki/Dockerfile
+Parsoid's config is located in /usr/lib/parsoid/config.yaml
 
-Please note that you'll need to update the image name in the FROM statement from /mediawiki/Dockerfile to reflect the image name you selected when building the Apache image.
+VisualEditor and Parsoid must be enabled and further configured to communicate via LocalSettings.php which is not included in this build
 
-Apache image Uses PHP7.1 and Apache2.4  -is based on the official PHP7.1-APACHE docker.
-Mediawiki uses version/branch 1.29/REL1.29 (latest)  -is based on the official mediawiki/mediawiki image.
+The root directory for Mediawiki is /var/www/html and this is also where LocalSettings.php must be generated or placed in.
+
+This is very much a work in progress, feel free to fork and pull and suggest improvements as needed.
