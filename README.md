@@ -1,4 +1,4 @@
-# -ubuntu-mediawiki
+# ubuntu-mediawiki
 A mediawiki container based on reference images PHP7.1-APACHE and mediawiki/mediawiki.  Please consult their pages for more detailed operation instructions until I have time to write a more flushed out description.
 
 This build includes Mediawiki (branch REL1.29), Node (v6), and Parsoid (developer installation) as well as VisualEditor.  
